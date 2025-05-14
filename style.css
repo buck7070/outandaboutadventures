@@ -48,23 +48,25 @@ footer {
   padding: 1em 0;
   font-size: 0.9em;
 }
+/* Container for carousel */
 .carousel {
   position: relative;
-  width: 100%;  /* Ensure the carousel takes the full width of the container */
-  max-width: 100%;
+  width: 100%;  /* Ensure the container takes up the full width */
+  max-width: 100%; 
+  overflow: hidden;  /* Hide anything overflowing */
   margin-top: 2em;
-  overflow: hidden;  /* Hide the overflowed images */
-  border-radius: 8px;
 }
 
+/* Inner container holding all images */
 .carousel-images {
   display: flex;
-  transition: transform 0.5s ease-in-out;
-  width: 300%;  /* 100% for each of the 3 images */
+  transition: transform 0.5s ease-in-out;  /* Smooth transition for the sliding effect */
+  width: 300%;  /* Total width for 3 images (100% per image) */
 }
 
 .carousel-image {
-  width: 100%;  /* Ensure each image takes up 100% of the carousel container */
-  height: auto;
-  object-fit: contain;
+  width: 100%;  /* Each image takes 100% of the container width */
+  height: auto;  /* Keep image aspect ratio */
+  object-fit: contain;  /* Ensure no cropping of images */
 }
+
