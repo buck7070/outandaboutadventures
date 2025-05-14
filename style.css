@@ -50,21 +50,21 @@ footer {
 }
 .carousel {
   position: relative;
+  width: 100%;  /* Ensure the carousel takes the full width of the container */
   max-width: 100%;
   margin-top: 2em;
-  overflow: hidden;
+  overflow: hidden;  /* Hide the overflowed images */
   border-radius: 8px;
 }
 
 .carousel-images {
   display: flex;
   transition: transform 0.5s ease-in-out;
-  width: 300%; /* 100% per image x 3 images */
+  width: 300%;  /* 100% for each of the 3 images */
 }
 
-
 .carousel-image {
-  width: 100%;  /* Make the image fill the container */
-  height: auto; /* Keep the aspect ratio */
-  object-fit: contain; /* Ensure the image is not cropped */
+  width: 100%;  /* Ensure each image takes up 100% of the carousel container */
+  height: auto;
+  object-fit: contain;
 }
