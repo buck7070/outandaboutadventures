@@ -42,22 +42,23 @@
   </footer>
 
   <!-- 🎞️ Carousel Script -->
- <script>
+<script>
   let index = 0;
   const slides = document.querySelector('.carousel-images');
   const total = slides.children.length;
-  
+
   // Function to update the carousel position
   function updateCarousel() {
-    slides.style.transform = `translateX(-${index * 100}%)`;
+    slides.style.transform = `translateX(-${index * 100}vw)`;  /* Ensure smooth slide based on viewport width */
   }
 
   // Set interval to automatically move to the next slide every 3 seconds
   setInterval(() => {
     index = (index + 1) % total;  // Loop back to the first image after the last one
     updateCarousel();
-  }, 3000);  // You can adjust the speed (3000ms = 3 seconds)
+  }, 3000);  // Adjust the speed (3000ms = 3 seconds)
 </script>
+
 
 </body>
 </html>
