@@ -43,14 +43,15 @@
 
   <!-- 🎞️ Carousel Script -->
   <script>
-    let index = 0;
-    const slides = document.querySelector('.carousel-images');
-    const total = slides.children.length;
+  let index = 0;
+  const slides = document.querySelector('.carousel-images');
+  const total = slides.children.length;
 
-    setInterval(() => {
-      index = (index + 1) % total;
-      slides.style.transform = `translateX(-${index * 100}%)`;
-    }, 3000);
-  </script>
+  setInterval(() => {
+    index = (index + 1) % total;  // This will loop the images
+    slides.style.transform = `translateX(-${index * 100}%)`;
+  }, 3000);  // Adjust the timing if needed
+</script>
+
 </body>
 </html>
