@@ -52,7 +52,7 @@ footer {
 .carousel {
   position: relative;
   width: 100%;  /* Ensure the container takes up the full width */
-  max-width: 100%; 
+  max-width: 100%;
   overflow: hidden;  /* Hide anything overflowing */
   margin-top: 2em;
 }
@@ -65,8 +65,10 @@ footer {
 }
 
 .carousel-image {
-  width: 100%;  /* Each image takes 100% of the container width */
+  width: 100vw;  /* Ensure the image fills the full viewport width */
   height: auto;  /* Keep image aspect ratio */
-  object-fit: contain;  /* Ensure no cropping of images */
+  object-fit: cover;  /* Ensure the images cover the whole space (without stretching) */
+  object-position: center;  /* Center the image if it has extra space */
 }
+
 
