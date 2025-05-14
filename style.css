@@ -62,8 +62,9 @@ footer {
   width: 300%; /* 100% per image x 3 images */
 }
 
+
 .carousel-image {
-  width: 100%;
-  flex-shrink: 0;
-  object-fit: cover;
+  width: 100%;  /* Make the image fill the container */
+  height: auto; /* Keep the aspect ratio */
+  object-fit: contain; /* Ensure the image is not cropped */
 }
