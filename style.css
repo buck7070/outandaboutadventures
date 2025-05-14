@@ -58,24 +58,25 @@ footer {
 }
 
 /* Inner container holding all images */
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 2em;
+  height: 60vh; /* Fixed height that scales with screen size */
+}
+
 .carousel-images {
   display: flex;
-  transition: transform 0.5s ease-in-out;  /* Smooth transition for the sliding effect */
-  width: 300%;  /* Total width for 3 images (100% per image) */
+  transition: transform 0.5s ease-in-out;
+  height: 100%;
 }
 
 .carousel-image {
-  width: 100vw;  /* Ensure the image fills the full viewport width */
-  height: auto;  /* Keep image aspect ratio */
-  object-fit: cover;  /* Ensure the images cover the whole space (without stretching) */
-  object-position: center;  /* Center the image if it has extra space */
+  flex: 0 0 100%;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;  /* Use contain for full image visibility */
+  object-position: center;
 }
-@media screen and (max-width: 768px) {
-  .carousel-image {
-    width: 100vw;  /* Take up the full viewport width */
-    height: auto;  /* Maintain aspect ratio */
-    object-fit: contain;  /* Prevent image cropping on smaller screens */
-  }
-}
-
 
