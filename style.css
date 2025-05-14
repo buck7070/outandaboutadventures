@@ -70,5 +70,12 @@ footer {
   object-fit: cover;  /* Ensure the images cover the whole space (without stretching) */
   object-position: center;  /* Center the image if it has extra space */
 }
+@media screen and (max-width: 768px) {
+  .carousel-image {
+    width: 100vw;  /* Take up the full viewport width */
+    height: auto;  /* Maintain aspect ratio */
+    object-fit: contain;  /* Prevent image cropping on smaller screens */
+  }
+}
 
 
