@@ -42,15 +42,21 @@
   </footer>
 
   <!-- 🎞️ Carousel Script -->
-  <script>
+ <script>
   let index = 0;
   const slides = document.querySelector('.carousel-images');
   const total = slides.children.length;
-
-  setInterval(() => {
-    index = (index + 1) % total;  // This will loop the images
+  
+  // Function to update the carousel position
+  function updateCarousel() {
     slides.style.transform = `translateX(-${index * 100}%)`;
-  }, 3000);  // Adjust the timing if needed
+  }
+
+  // Set interval to automatically move to the next slide every 3 seconds
+  setInterval(() => {
+    index = (index + 1) % total;  // Loop back to the first image after the last one
+    updateCarousel();
+  }, 3000);  // You can adjust the speed (3000ms = 3 seconds)
 </script>
 
 </body>
