@@ -23,7 +23,15 @@
     <section class="intro">
       <h2>Welcome to Our Adventures</h2>
       <p>We explore the extraordinary. Join us as we share our journeys across the country and beyond.</p>
-      <img src="images/hero.jpg" alt="Adventure photo" />
+    </section>
+
+    <!-- 🚀 Carousel Section -->
+    <section class="carousel">
+      <div class="carousel-images">
+        <img src="images/photo1.jpg" class="carousel-image" alt="Adventure 1" />
+        <img src="images/photo2.jpg" class="carousel-image" alt="Adventure 2" />
+        <img src="images/photo3.jpg" class="carousel-image" alt="Adventure 3" />
+      </div>
     </section>
   </main>
 
@@ -32,5 +40,17 @@
       <p>&copy; 2025 Out and About Adventures</p>
     </div>
   </footer>
+
+  <!-- 🎞️ Carousel Script -->
+  <script>
+    let index = 0;
+    const slides = document.querySelector('.carousel-images');
+    const total = slides.children.length;
+
+    setInterval(() => {
+      index = (index + 1) % total;
+      slides.style.transform = `translateX(-${index * 100}%)`;
+    }, 3000);
+  </script>
 </body>
 </html>
